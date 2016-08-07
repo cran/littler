@@ -1,9 +1,9 @@
 Package: littler
 Type: Package
 Title: R at the Command-Line via 'r'
-Version: 0.3.0
-Date: 2015-10-29
-Author: Dirk Eddelbuettel
+Version: 0.3.1
+Date: 2016-08-06
+Author: Dirk Eddelbuettel and Jeff Horner
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A scripting and command-line front-end
  is provided by 'r' (aka 'littler') as a lightweight binary wrapper around
@@ -13,11 +13,15 @@ Description: A scripting and command-line front-end
  expression as the first line in scripts) as well as command-line use in
  standard Unix pipelines. In other words, r provides the R language without
  the environment.
+URL: http://dirk.eddelbuettel.com/code/littler.html
+BugReports: https://github.com/eddelbuettel/littler/issues
 License: GPL (>= 2)
 OS_type: unix
-Suggests: knitr
+SystemRequirements: libR
+Suggests: knitr, docopt, rcmdcheck
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1
 NeedsCompilation: yes
-Packaged: 2015-10-29 12:30:13.34583 UTC; edd
+Packaged: 2016-08-07 02:07:31.145748 UTC; edd
 Repository: CRAN
-Date/Publication: 2015-10-29 14:13:59
+Date/Publication: 2016-08-07 05:16:53

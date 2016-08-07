@@ -1,3 +1,76 @@
+2016-08-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Added URL and BugReports:
+
+	* R/test.R (r): New helper function r() to return path to binary
+	* man/r.rd: Documentation
+	* man/littler.rd: Removed alias to 'r'
+	* NAMESPACE: Export r
+
+	* inst/examples/rcc.r: New example wrapping rcmdcheck::rcmdcheck()
+	* inst/examples/render.r: New (still very simple) example to call
+	rmarkdown::render()
+
+	* inst/examples/check.r: Extended help and usage now via '-x'
+	* inst/examples/dratInsert.r: Idem
+	* inst/examples/install2.r: Idem
+	* inst/examples/installGithub.r: Idem
+	* inst/examples/installRepo.r: Idem
+
+	* .travis.yml: Switch to using run.sh for Travis CI
+
+	* tests/simpleTests.R: Make tests conditional on Linux
+
+2016-06-05  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/roxy.r: Minor correction to documentation
+
+2016-03-28  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/check.r: Add support for rcmdcheck
+	* DESCRIPTION: Add Suggests: rcmdcheck
+
+2016-03-21  Brandon Bertelsen <brandon@bertelsen.ca>
+
+	* vignettes/littler-examples.Rmd: Correct installGithub.r example
+
+2016-02-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/littler.c (showVersionAndExit): Updated copyright
+
+	* src/scripts/littler.R: Added copyright header, reindented
+	* src/scripts/autoloads.R: Idem
+	* src/scripts/ldflags.R: Idem
+
+2016-02-21  Mattias Ellert  <mattias.ellert@fysast.uu.se>
+
+	* configure.ac: Add support for AM_LDFLAGS
+	* src/scripts/littler.R: Exclude three more variables
+	reflecting the (optional) installation directory
+
+2015-11-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/rhome.r: New script to call R.home(...)
+
+2015-11-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Add Suggests: docopt
+
+	* .travis.yml: Add r-cran-docopt (via our PPA)
+
+2015-11-17  Steven Pav <shabbychef@gmail.com>
+
+	* inst/examples/install2.r: Support options past '--' which are
+	passed on to R CMD INSTALL as INSTALL_opts
+
+2015-11-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Add 'SystemRequirements: libR' per discussion with CRAN
+
+2015-10-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* NAMESPACE: Added some comments explaining empty content
+
 2015-10-29  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Release 0.3.0
