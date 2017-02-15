@@ -4,13 +4,29 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
+\section{Changes in littler version 0.3.2 (2017-02-14)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item New scripts \code{getRStudioServer.r} and
+      \code{getRStudioDesktop.r} to download daily packages, currently
+      defaults to Ubuntu amd64
+      \item New script \code{c4c.r} calling \code{rhub::check_for_cran()}
+      \item New script \code{rd2md.r} to convert Rd to markdown.
+      \item New script \code{build.r} to create a source tarball.
+      \item The \code{installGitHub.r} script now use package
+      \CRANpkg{remotes} (PR \ghpr{44}, \ghpr{46})
+    }
+  }
+}
+
 \section{Changes in littler version 0.3.1 (2016-08-06)}{
   \itemize{
     \item Changes in examples
     \itemize{
       \item \code{install2.r} now passes on extra options past \code{--}
-      to \code{R CMD INSTALL} (\ghpr{37} by Steven Pav)
-      \item Added \code{rcc.r} to run 'rcmdcheck::rcmdcheck()'
+      to \code{R CMD INSTALL} (PR \ghpr{37} by Steven Pav)
+      \item Added \code{rcc.r} to run \code{rcmdcheck::rcmdcheck()}
       \item Added (still simple) \code{render.r} to render (R)markdown
       \item Several examples now support the \code{-x} or \code{--usage}
       flag to show extended help.
@@ -18,7 +34,7 @@
     \item Changes in build system
     \itemize{
       \item The \code{AM_LDFLAGS} variable is now set and used too
-      (\ghpr{38} by Mattias Ellert)
+      (PR \ghpr{38} by Mattias Ellert)
       \item Three more directories, used when an explicit installation
       directory is set, are excluded (also \ghpr{38} by Mattias)
       \item Travis CI is now driven via \code{run.sh} from our fork, and
@@ -37,7 +53,7 @@
     \item Changes in documentation
     \itemize{
       \item The help output for \code{installGithub.r} was corrected
-      (\ghpr{39} by Brandon Bertelsen)
+      (PR \ghpr{39} by Brandon Bertelsen)
     }
   }
 }

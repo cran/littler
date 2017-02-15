@@ -1,4 +1,48 @@
+2017-02-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.3.2
+
+	* src/scripts/littler.R: Also skip R_USER
+
+2017-02-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/build.r: New script calling R CMD build
+
+2017-02-05  Dirk Eddelbuettel  <edd@max.eddelbuettel.com>
+
+	* inst/examples/c4c.r: New script calling rhub::check4cran()
+
+	* inst/examples/getRStudioDesktop.r: New script
+	* inst/examples/getRStudioServer.r: New script
+
+2016-12-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/init.R: Additional #nocov tags
+	* R/test.R: Idem
+
+2016-11-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/rd2md.r: New script
+
+2016-11-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/installGithub.r: Use remotes instead of devtools
+	* inst/examples/installRepo.r: Ditto
+	* vignettes/littler-examples.Rmd: Ditto
+
+	* inst/examples/check.r: Small correction for .libPaths() management
+
+2016-10-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/rd2md.r: Convert Rd to markdown (for use in posts)
+
+2016-08-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* configure (PACKAGE_VERSION): Re-ran autoconf to set version to 0.3.1
+
 2016-08-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Release 0.3.1
 
 	* DESCRIPTION: Added URL and BugReports:
 

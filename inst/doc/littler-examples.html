@@ -118,7 +118,7 @@ fsizes &lt;-<span class="st"> </span><span class="kw">as.integer</span>(<span cl
 <h3>CRAN package installation</h3>
 <div id="direct-installation" class="section level4">
 <h4>Direct Installation</h4>
-<p>This is one of my favourite <a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a> scripts which I use frequently to install packages off <a href="http://cran.r-project.org">CRAN</a>.</p>
+<p>This is one of my favourite <a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a> scripts which I use frequently to install packages off <a href="https://cran.r-project.org">CRAN</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#!/usr/bin/env r</span>
 
 if (<span class="kw">is.null</span>(argv) |<span class="st"> </span><span class="kw">length</span>(argv)&lt;<span class="dv">1</span>) {
@@ -127,7 +127,7 @@ if (<span class="kw">is.null</span>(argv) |<span class="st"> </span><span class=
 }
 
 ## adjust as necessary, see help('download.packages')
-repos &lt;-<span class="st"> &quot;http://cran.rstudio.com&quot;</span> 
+repos &lt;-<span class="st"> &quot;https://cran.rstudio.com&quot;</span> 
 
 ## this makes sense on Debian where no packages touch /usr/local
 lib.loc &lt;-<span class="st"> &quot;/usr/local/lib/R/site-library&quot;</span>
@@ -211,9 +211,9 @@ if (opt$error) {
 <span class="co">#</span>
 <span class="co"># Released under GPL (&gt;= 2)</span>
 
-## load docopt and devtools from CRAN
+## load docopt and remotes (or devtools) from CRAN
 <span class="kw">suppressMessages</span>(<span class="kw">library</span>(docopt))       <span class="co"># we need docopt (&gt;= 0.3) as on CRAN</span>
-<span class="kw">suppressMessages</span>(<span class="kw">library</span>(devtools)) 
+<span class="kw">suppressMessages</span>(<span class="kw">library</span>(remotes))      <span class="co"># can use devtools as a fallback</span>
 
 ## configuration for docopt
 doc &lt;-<span class="st"> &quot;Usage: installGithub.r [-h] [-d DEPS] REPOS...</span>
