@@ -1,8 +1,34 @@
 \name{NEWS}
-\title{News for Package 'littler'}
-\newcommand{\ghrepo}{\href{https://github.com/#1}{\pkg{#1}}}
+\title{News for Package \pkg{littler}}
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
+
+\section{Changes in littler version 0.3.3 (2017-12-17)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item The script \code{installGithub.r} now correctly uses the
+      \code{upgrade} argument (Carl Boettiger in \ghpr{49}).
+      \item New script \code{pnrrs.r} to call the package-native
+      registration helper function added in R 3.4.0
+      \item The script \code{install2.r} now has more robust error
+      handling (Carl Boettiger in \ghpr{50}).
+      \item New script \code{cow.r} to use R Hub's \code{check_on_windows}
+      \item Scripts \code{cow.r} and \code{c4c.r} use
+      \code{#!/usr/bin/env r}
+      \item New option \code{--fast} (or \code{-f}) for scripts
+      \code{build.r} and \code{rcc.r} for faster package build and check
+      \item The \code{build.r} script now defaults to using the current
+      directory if no argument is provided.
+      \item The RStudio getters now use the \code{rvest} package to
+      parse the webpage with available versions.
+    }
+    \item Changes in package
+    \itemize{
+      \item Travis CI now uses https to fetch script, and sets the group
+    }
+  }
+}
 
 \section{Changes in littler version 0.3.2 (2017-02-14)}{
   \itemize{

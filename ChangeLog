@@ -1,3 +1,78 @@
+2017-12-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.3.3
+
+	* README.md: Updated
+
+2017-12-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/littler-examples.Rmd: Expanded and updated
+
+2017-11-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/getRStudioServer.r: Rewritten using rvest
+	* inst/examples/getRStudioDesktop.r: Idem
+
+2017-11-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/build.r: Use current directory if none given
+
+2017-09-05  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/littler-examples.Rmd (vignette): Expanded
+
+2017-09-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/dratInsert.r: Combine suppressMessages() calls
+        * inst/examples/installGithub.r: Idem
+        * inst/examples/installRepo.r: Idem
+        * inst/examples/rd2md.r: Idem
+        * inst/examples/testInstalled.r: Idem
+
+2017-08-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/build.r: New option --fast skipping vignettes and manual
+	* inst/examples/rcc.r: Ditto
+
+2017-08-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/runit.r: Updated docopt usage
+
+2017-07-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/c4c.r: Use #!/usr/bin/env r instead
+	* inst/examples/cow.r: Idem
+
+2017-06-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/cow.r: Added simple rhub::check_on_windows() wrapper
+
+ 	* .travis.yml (group): Added as required by Travis CI
+
+2017-05-01  Carl Boettiger  <cboettig@gmail.com>
+
+	* inst/examples/install2.r: More robust error handling
+
+2017-04-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/pnrrs.r: Added 'pnrrs.r' helper calling
+	tools::package_native_routine_registration_skeleton() available in R
+	3.4.0 and later
+
+2017-04-04  Carl Boettiger  <cboettig@gmail.com>
+
+	* inst/examples/installGithub.r: Correct argument to upgrade
+
+2017-02-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml (before_install): Use https
+
 2017-02-14  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.3.2
