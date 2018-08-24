@@ -1,12 +1,13 @@
 #!/usr/bin/env r
 #
-# Another example to run a shiny app
+# Another example to convert markdown
 #
 # Copyright (C) 2016  Dirk Eddelbuettel
 #
 # Released under GPL (>= 2)
 
-suppressMessages(library(docopt))       # we need docopt (>= 0.3) as on CRAN
+## load docopt package from CRAN
+library(docopt)
 
 ## configuration for docopt
 doc <- "Usage: render.r [-h] [-x] [FILES...]
@@ -26,15 +27,13 @@ See http://dirk.eddelbuettel.com/code/littler.html for more information.\n")
     q("no")
 }
 
-print(opt)
-
 library(rmarkdown)
 
-## helper function 
+## helper function
 renderArg <- function(p) {
     if (!file.exists(p)) stop("No file '", p, "' found. Aborting.", .Call=FALSE)
     render(p)
 }
 
-## render files using helper function 
+## render files using helper function
 sapply(opt$FILES, renderArg)

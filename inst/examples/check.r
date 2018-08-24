@@ -2,12 +2,12 @@
 #
 # Another example to check one or more packages, with option parsing
 #
-# Copyright (C) 2015 - 2016  Dirk Eddelbuettel
+# Copyright (C) 2015 - 2017  Dirk Eddelbuettel
 #
 # Released under GPL (>= 2)
 
 ## load docopt package from CRAN
-suppressMessages(library(docopt))       # we need docopt (>= 0.3) as on CRAN
+library(docopt)
 
 ## configuration for docopt
 doc <- "Usage: check.r [-h] [-x] [--as-cran] [--repo REPO] [--install-deps] [--install-kitchen] [--deb-pkgs PKGS...] [--use-sudo] [--library LIB] [--setwd DIR] [TARGZ ...]
@@ -40,11 +40,7 @@ See http://dirk.eddelbuettel.com/code/littler.html for more information.\n")
 args <- character()
 if (opt$`as-cran`) args <- c(args, "--as-cran")
 
-if (opt$libdir == "NULL") opt$libdir <- NULL
 if (!is.null(opt$libdir)) .libPaths(opt$libdir)
-
-## doctopt results are characters, so if we meant NULL we have to set NULL
-if (opt$repo == "NULL") opt$repo <- NULL
 
 r <- getOption("repos")
 r["CRAN"] <- opt$repo
@@ -89,7 +85,7 @@ if (length(opt$`deb-pkgs`) > 1 || opt$`deb-pkgs` != FALSE) {
 if (opt$`install-deps` || opt$`install-kitchen`) sapply(opt$TARGZ, installArg, opt$lib, opt$repo)
 
 ## change directory if a target directory was given
-if (opt$setwd != "") setwd(opt$setwd)
+if (!is.null(opt$setwd)) setwd(opt$setwd)
 
 ## installation given selected options and arguments
 sapply(opt$TARGZ, checkArg, args)

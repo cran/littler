@@ -1,3 +1,97 @@
+2018-08-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.3.4
+
+	* configure.ac: Idem
+	* configgure: Idem
+
+	* README.md: Updated
+
+2018-08-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/check.r: Use is.null(), other docopt simplifications
+
+2018-08-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/rcc.r: Use is.null() to test for empty arguments
+
+2018-08-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* update.r: No longer need suppressMessages() around library()
+	* shiny.r: Idem
+	* rcc.r: Idem
+	* install2.r: Idem
+	* check.r: Idem
+	* build.r: Idem
+	* render.r: Idem
+	* testInstalled.r: Idem
+	* rd2md.r: Idem
+
+2018-07-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/getRStudioDesktop.r: More defensive use of URL
+	while curl (OS-level) library packages have is more fragile
+	* inst/examples/getRStudioServer.r: Idem
+
+2018-07-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/getRStudioDesktop.r: URLs updated
+	* inst/examples/getRStudioServer.r: Idem
+
+2018-05-25  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/update.r: Added docopt support
+
+2018-05-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/littler-examples.Rmd: Updated and extended
+
+	* inst/examples/render.r: Minor tweak
+
+2018-05-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/rcc.r: Correct args for '--fast' call
+
+2018-05-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/install2.r: New option -s to skip installed packages
+	* inst/examples/installIfNew.R:	Removed as now redundant
+
+	* inst/examples/getRStudioServer.r: Update URL to trusty
+
+2018-05-06  Brandon Bertelsen  <brandon@bertelsen.ca>
+
+	* inst/examples/installIfNew.R: New example to only install new
+	packages not already installed
+
+2018-02-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/getRStudioDesktop.r: Source URL update
+
+2018-01-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/kitten.r: New script to call pkgKitten::kitten()
+
+	* inst/examples/compAttr.r: Use '#!/usr/bin/env r' as shebang line
+	* inst/examples/fsizes.r: Idem
+	* inst/examples/getRStudioDesktop.r: Idem
+	* getRStudioServer.r: Idem
+	* highlightsweave.r: Idem
+	* inst/examples/knit.r: Idem
+	* inst/examples/pnrrs.r: Idem
+	* inst/examples/roxy.r: Idem
+
+2017-12-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/check.r: Remove second docopt() parse
+	* inst/examples/dratInsert.r: Idem
+	* inst/examples/install2.r: Idem
+	* inst/examples/installGithub.r: Idem
+	* inst/examples/installRepo.r: Idem
+	* inst/examples/rd2md.r: Idem
+
 2017-12-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.3.3

@@ -2,16 +2,13 @@
 #
 # Convert NEWS.Rd to markdown
 #
-# Copyright (C) 2016         Dirk Eddelbuettel
+# Copyright (C) 2016 - 2017  Dirk Eddelbuettel
 #
 # Released under GPL (>= 2)
 
 ## load docopt package from CRAN
-suppressMessages({
-    library(docopt)               # we need docopt (>= 0.3) as on CRAN
-    library(tools)
-})
-
+library(docopt)
+library(tools)
 
 ## configuration for docopt
 doc <- "Usage: rd2md.r [-h] [-x] [--src REPODIR] [--out OUTDIR] [FILES...]
@@ -33,9 +30,6 @@ rd2md.r is part of littler which brings 'r' to the command-line.
 See http://dirk.eddelbuettel.com/code/littler.html for more information.\n")
     q("no")
 }
-
-## docopt parsing
-opt <- docopt(doc)
 
 ## helper function
 convertArg <- function(p, src, out) {

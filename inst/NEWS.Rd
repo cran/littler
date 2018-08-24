@@ -3,6 +3,21 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
+\section{Changes in littler version 0.3.4 (2018-xx-yy)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item The shebang line is now \code{#!/usr/bin/env r} to work with
+      either \code{/usr/local/bin/r} or \code{/usr/bin/r}.
+      \item New example script to only install packages not yet installed
+      (Brandon Bertelsen in \ghpr{59}); later added into \code{install2.r}.
+      \item Functions \code{getRStudioDesktop.r} and
+      \code{getRStudioServer.r} updated their internal URLs.
+      \item Several minor enhancements were made to example scripts.
+    }
+  }
+}
+
 \section{Changes in littler version 0.3.3 (2017-12-17)}{
   \itemize{
     \item Changes in examples
