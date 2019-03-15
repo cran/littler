@@ -7,6 +7,20 @@
   \itemize{
     \item Changes in examples
     \itemize{
+      \item The scripts \code{installGithub.r} and \code{install2.r} get
+      a new option \code{-r | --repos} (Gergely Daroczi in \ghpr{67})
+    }
+    \item Changes in build system
+    \itemize{
+      \item The \code{AC_DEFINE} macro use rewritten to please R CMD check.
+    }
+  }
+}
+
+\section{Changes in littler version 0.3.6 (2019-01-26)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
       \item The scripts \code{install.r} and \code{install2.r} now support
       argument \code{"."}, and add it if called in a source directory.
       \item The script \code{install2.r} can set \code{Ncpus} for

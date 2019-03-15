@@ -7,7 +7,7 @@ AC_PREREQ(2.61)
 # Every other copy of the package version number gets its value from here
 # The m4_esyscmd_s invocation is due to an excellent StackOverflow answer.
 #AC_INIT([littler], m4_esyscmd_s([awk -e '/^Version:/ {print $2}' DESCRIPTION]))
-AC_INIT([littler], [0.3.6])
+AC_INIT([littler], [0.3.7])
 
 #  Look for ancillary configure tools in tools
 dnl AC_CONFIG_AUX_DIR(tools)
@@ -111,7 +111,7 @@ R_PROG
 if test -d ".git/"; then
     GITREVISION=`git log --format=fuller | head -6 | awk '/^commit / {print substr($2,1,7)}'`
     GITDATE=`git log --format=fuller | head -6 | awk '/^CommitDate: / {print $2, $3, $4, $5, $6, $7}'`
-    AC_DEFINE(VERBOSE_BUILD)
+    AC_DEFINE([VERBOSE_BUILD],[1],[Verbose build with git revision and date information])
 else
     GITREVISION=""
     GITDATE=""
