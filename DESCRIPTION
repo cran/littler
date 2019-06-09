@@ -1,8 +1,8 @@
 Package: littler
 Type: Package
 Title: R at the Command-Line via 'r'
-Version: 0.3.7
-Date: 2019-03-15
+Version: 0.3.8
+Date: 2019-06-09
 Author: Dirk Eddelbuettel and Jeff Horner
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A scripting and command-line front-end
@@ -22,6 +22,6 @@ Suggests: knitr, docopt, rcmdcheck
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1
 NeedsCompilation: yes
-Packaged: 2019-03-15 11:00:09.522844 UTC; edd
+Packaged: 2019-06-09 16:19:34.73023 UTC; edd
 Repository: CRAN
-Date/Publication: 2019-03-15 12:40:03 UTC
+Date/Publication: 2019-06-09 16:30:03 UTC

@@ -68,8 +68,6 @@ overflow: auto;
 margin-left: 2%;
 position: fixed;
 border: 1px solid #ccc;
-webkit-border-radius: 6px;
-moz-border-radius: 6px;
 border-radius: 6px;
 }
 
@@ -97,9 +95,14 @@ font-size: 12px;
 .tocify-subheader .tocify-subheader {
 text-indent: 30px;
 }
-
 .tocify-subheader .tocify-subheader .tocify-subheader {
 text-indent: 40px;
+}
+.tocify-subheader .tocify-subheader .tocify-subheader .tocify-subheader {
+text-indent: 50px;
+}
+.tocify-subheader .tocify-subheader .tocify-subheader .tocify-subheader .tocify-subheader {
+text-indent: 60px;
 }
 
 .tocify .tocify-item > a, .tocify .nav-list .nav-header {
@@ -503,13 +506,13 @@ float: none;
 
           item.append($("<a/>", {
 
-            "text": self.text()
+            "html": self.html()
 
           }));
 
         } else {
 
-          item.text(self.text());
+          item.html(self.html());
 
         }
 
@@ -1504,8 +1507,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -1543,7 +1544,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Littler Examples</h1>
 <h4 class="author">Dirk Eddelbuettel</h4>
-<h4 class="date">Originally written 2015-10-28; Updated 2017-12-10, 2018-05-24 and 2019-01-06</h4>
+<h4 class="date">Originally written 2015-10-28; Updated 2017-12-10, 2018-05-24, 2019-01-06 and 2019-06-09</h4>
 
 </div>
 
@@ -1554,7 +1555,7 @@ div.tocify {
 </div>
 <div id="simple-direct-command-line-use" class="section level2">
 <h2>Simple Direct Command-line Use</h2>
-<p><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a> can be used directly on the command-line just like, say, <code>bc</code>:</p>
+<p><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a> can be used directly on the command-line just like, say, <code>bc</code>, easily consuming standard input from a pipe:</p>
 <pre class="bash"><code>$ echo 'cat(pi^2,&quot;\n&quot;)' | r
 9.869604</code></pre>
 <p>Equivalently, commands that are to be evaluated can be given on the command-line</p>
@@ -1608,7 +1609,7 @@ lib.loc &lt;- &quot;/usr/local/lib/R/site-library&quot;
 install.packages(argv, lib.loc, repos)</code></pre>
 <p>I invoke it all the time with one, two or more packages to install (or reinstall).</p>
 <pre class="bash"><code>$ install.r digest RcppCNPy</code></pre>
-<p>It conveniently installs all dependencies, and uses the chosen target directory, all while keeping my R prompt (or prompts with multiple sessions) free to do other things.</p>
+<p>It conveniently installs all dependencies, and uses the chosen target directory, all while keeping my R prompt (or prompts with multiple sessions) free to do other things. Also, if used with <code>options(&quot;Ncpu&quot;)</code> set, then (remote CRAN) packages will be installed in parallel.</p>
 </div>
 <div id="install2.r-with-cmdline-parsing" class="section level2">
 <h2>install2.r: With Cmdline Parsing</h2>
@@ -1616,7 +1617,7 @@ install.packages(argv, lib.loc, repos)</code></pre>
 <pre class="sh"><code>$ install2.r -l /tmp/lib Rcpp BH                         # install into given library
 $ install2.r -- --with-keep.source drat                  # keep the source
 $ install2.r -- --data-compress=bzip2 stringdist         # prefer bz2 compression</code></pre>
-<p>Another <em>very</em> useful option is <code>-n N</code> or <code>--ncpus N</code> which will parallelize the installation across <code>N</code> processes. This can be set automagically by setting <code>options(Ncpus)</code>.</p>
+<p>Another <em>very</em> useful option is <code>-n N</code> or <code>--ncpus N</code> which will parallelize the installation across <code>N</code> processes. This can be set automagically by setting <code>options(&quot;Ncpus&quot;)</code>.</p>
 <div id="installing-from-sources" class="section level3">
 <h3>Installing From Sources</h3>
 <p>Starting with version 0.2.2, <code>install.r</code> and <code>install2.r</code> now recognise installable source files. So one can also do this:</p>

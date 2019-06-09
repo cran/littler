@@ -1,3 +1,51 @@
+2019-06-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.3.8
+
+	* configure.ac: Idem
+	* configure: Idem
+
+	* inst/examples/c4c.r: Set check_args="--no-manual --no-vignettes" as
+	we cannot assume rhub to have functioning latex infrastructure
+	* inst/examples/cow.r: Ditto
+	* inst/examples/rchk.r: Ditto
+
+2019-06-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/tt.r: Initial steps towards a tinytest wrapper
+
+2019-06-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/install2.r: Extend to optional parallel installation
+
+2019-05-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/install.r: Extend to optional parallel installation
+	as tested in installedParallel.r
+	* inst/examples/installParallel.r: Removed now redundant file
+
+2019-05-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/installParallel.r: Potential replacement for
+	install.r which can install external repos in parallel
+
+2019-04-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/install.r: Usage help display update
+
+2019-03-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* vignettes/littler-faq.Rmd (vignette): New section on adding r to PATH
+
+	* src/Makevars.in: Reference new littler-faq entry in help display
+
+	* R/init.R (.onAttach): If 'r' ('lr') is not in path, displayed
+	message also references new entry in littler-faq vignette
+
 2019-03-15  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.3.7
