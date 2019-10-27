@@ -1,8 +1,8 @@
 #!/usr/bin/env r
 #
-# Another example to convert markdown
+# Another example to convert from Rnw and also compact
 #
-# Copyright (C) 2016 - 2019  Dirk Eddelbuettel
+# Copyright (C) 2019  Dirk Eddelbuettel
 #
 # Released under GPL (>= 2)
 
@@ -10,7 +10,7 @@
 library(docopt)
 
 ## configuration for docopt
-doc <- "Usage: render.r [-c] [-h] [-x] [FILES...]
+doc <- "Usage: sweave.r [-c] [-h] [-x] [FILES...]
 
 -c --compact         compact pdf file [default: FALSE]
 -h --help            show this help text
@@ -21,24 +21,25 @@ opt <- docopt(doc)			# docopt parsing
 if (opt$usage) {
     cat(doc, "\n\n")
     cat("Examples:
-  render.r foo.Rmd bar.Rmd        # convert two given files
+  sweave.r foo.Rnw bar.Rnw        # convert two given files
 
-render.r is part of littler which brings 'r' to the command-line.
+sweave.r is part of littler which brings 'r' to the command-line.
 See http://dirk.eddelbuettel.com/code/littler.html for more information.\n")
     q("no")
 }
 
-library(rmarkdown)
-
 ## helper function
-renderArg <- function(p) {
+sweaveFunction <- function(p) {
     if (!file.exists(p)) stop("No file '", p, "' found. Aborting.", call.=FALSE)
-    render(p)
+    utils::Sweave(p)
+    s <- gsub(".Rnw$", ".tex", p)
+    tools::texi2pdf(s, texi2dvi="pdflatex")
+    tools::texi2pdf(s, texi2dvi="pdflatex")
     if (opt$compact) {
-        s <- gsub(".Rmd$", ".pdf", p)
-        if (file.exists(s)) tools::compactPDF(s, gs_quality="ebook")
+        r <- gsub(".Rnw$", ".pdf", p)
+        if (file.exists(r)) tools::compactPDF(r, gs_quality="ebook")
     }
 }
 
 ## render files using helper function
-sapply(opt$FILES, renderArg)
+sapply(opt$FILES, sweaveFunction)

@@ -3,6 +3,30 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
+
+\section{Changes in littler version 0.3.9 (2019-xx-yy)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item The use of \code{call.} in \code{stop()} was corrected
+      (Stefan Widgren in \ghpr{72}).
+      \item New script \code{cos.r} to check (at rhub) on Solaris.
+      \item New script \code{compactpdf.r} to compact pdf files.
+      \item The \code{build.r} script now compacts vignettes and resaves
+      data.
+      \item The \code{tt.r} script now supports parallel tests and side
+      effects.
+      \item The \code{rcc.r} script can now report error codes.
+      \item The `--libloc` option to \code{update.r} was updated.
+      \item The \code{render.r} script can optionally compact pdfs.
+      \item New script \code{sweave.r} to render (and compact) pdfs.
+      \item New script \code{pkg2bibtex.r} to show bibtex entries.
+      \item The \code{kitten.r} script has a new option \code{--puppy}
+      to add \pkg{tinytest} support in purring packages.
+    }
+  }
+}
+
 \section{Changes in littler version 0.3.8 (2019-06-09)}{
   \itemize{
     \item Changes in examples
@@ -11,7 +35,7 @@
       parallel installation using \code{options{Ncpu}} on remote packages.
       \item The \code{install.r} script has an expanded help text
       mentioning the environment variables it considers.
-      \item A new script \code{tt.t} was added to support \code{tinytest}.
+      \item A new script \code{tt.r} was added to support \code{tinytest}.
       \item The rhub checking scripts now all suppress builds of manual
       and vignettes as asking for working latex appears to be too much. 
     }
