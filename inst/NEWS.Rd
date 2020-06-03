@@ -3,8 +3,29 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
+\section{Changes in littler version 0.3.10 (2020-xx-yy)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item The \code{update.r} script only considers writeable directories.
+      \item The \code{rcc.r} script tries to report full logs by setting
+      \code{_R_CHECK_TESTS_NLINES_=0}. 
+      \item The \code{tt.r} script has an improved \code{ncpu} fallback.
+      \item Several installation and updating scripts set
+      \code{_R_SHLIB_STRIP_} to \code{TRUE}.
+      \item A new script \code{installBioc.r} was added.
+      \item The \code{--error} option to \code{install2.r} was
+      generalized (Sergio Oller in \ghpr{78}).
+      \item The \code{roxy.r} script was extended a little.
+    }
+    \item Changes in package
+    \itemize{
+      \item Travis CI now uses the R 4.0.0 and use the bionic distro
+    }
+  }
+}
 
-\section{Changes in littler version 0.3.9 (2019-xx-yy)}{
+\section{Changes in littler version 0.3.9 (2019-10-27)}{
   \itemize{
     \item Changes in examples
     \itemize{
