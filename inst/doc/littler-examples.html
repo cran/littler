@@ -1524,7 +1524,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Littler Examples</h1>
 <h4 class="author">Dirk Eddelbuettel</h4>
-<h4 class="date">Originally written 2015-10-28; Updated 2017-12-10, 2018-05-24, 2019-01-06 and 2019-06-09</h4>
+<h4 class="date">Originally written 2015-10-28; Updated 2017-12-10, 2018-05-24, 2019-01-06, 2019-06-09 and 2020-06-16</h4>
 
 </div>
 
@@ -1532,6 +1532,7 @@ div.tocify {
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>We show and discuss a few of the files included in the <code>inst/examples/</code> source directory of <a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a> (which becomes the <code>examples/</code> directory once installed). In a few cases we remove comment lines to keep things more concise on this page. We use <code>$</code> to denote a shell (<em>i.e.</em> terminal) prompt.</p>
+<p>Note that some systems (such as macOS) cannot install littler as <code>r</code> (as lower-case and upper-case are by default the same; not a great idea). And for example the <code>zsh</code> has <code>r</code> as a builtin so you would have to use <code>/usr/bin/r</code>. See the <a href="littler-faq.html">littler FAQ</a> for more.</p>
 </div>
 <div id="simple-direct-command-line-use" class="section level2">
 <h2>Simple Direct Command-line Use</h2>
@@ -1561,6 +1562,7 @@ div.tocify {
   16 | 4
   18 | 
   20 | 333</code></pre>
+<p>(Note that some systems may not have <code>/boot</code> in which case you can try <code>/sbin</code> or another directory.)</p>
 <p>As we saw in the preceding example, the program can also be shortened like using the new <code>-d</code> option which reads from stdin and assigns to a <code>data.frame</code> named <code>X</code>.</p>
 <p>And, last but not least, this (somewhat unwieldy) expression can be stored in a helper script (where we now switch to using an explicit <code>readLines()</code> on <code>stdin</code>):</p>
 <pre class="r"><code>#!/usr/bin/env r

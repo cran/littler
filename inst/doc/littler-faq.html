@@ -11,7 +11,6 @@
 
 <meta name="author" content="Dirk Eddelbuettel" />
 
-<meta name="date" content="2019-03-23" />
 
 <title>Littler FAQ</title>
 
@@ -1525,7 +1524,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Littler FAQ</h1>
 <h4 class="author">Dirk Eddelbuettel</h4>
-<h4 class="date">2019-03-23</h4>
+<h4 class="date">2019-03-23, updated 2020-06-16</h4>
 
 </div>
 
@@ -1563,6 +1562,7 @@ sudo ln -s /usr/local/lib/R/site-library/littler/bin/r .</code></pre>
 <pre><code>cd /usr/local/bin 
 sudo ln -s /usr/local/lib/R/site-library/littler/bin/r lr</code></pre>
 <p>to create a command <code>lr</code> instead; see the previous question as to why. In either case adjust the source part of the <code>ln</code> command to where your binary is – which R can tell you via <code>system.file(&quot;bin&quot;, &quot;r&quot;, package=&quot;littler&quot;)</code>.</p>
+<p>Also note that <em>e.g.</em> the <a href="http://zsh.sourceforge.net/">zsh</a> has a builtin command <code>r</code> which may conflict, so using the explicit path of, say, <code>/usr/bin/r</code> or <code>/usr/local/bin/r</code> or … may provide an alternative.</p>
 </div>
 
 

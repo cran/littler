@@ -3,7 +3,7 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
-\section{Changes in littler version 0.3.10 (2020-xx-yy)}{
+\section{Changes in littler version 0.3.10 (2020-06-02)}{
   \itemize{
     \item Changes in examples
     \itemize{
@@ -20,7 +20,7 @@
     }
     \item Changes in package
     \itemize{
-      \item Travis CI now uses the R 4.0.0 and use the bionic distro
+      \item Travis CI now uses R 4.0.0 and the bionic distro
     }
   }
 }
