@@ -1,3 +1,83 @@
+2020-10-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.3.12
+
+	* configure: Idem
+
+2020-10-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/littler-faq.Rmd: Switch to minidown::mini_document
+	and 'framework: water' to dramatically reduce vignettes size
+	* vignettes/littler-examples.Rmd: Idem
+
+	* inst/examples/urlUpdate.r: Add -c | --check-only option
+
+2020-10-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/urlUpdate.r: New script to update URLs
+
+2020-09-25  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/cranIncoming.r: New script
+
+2020-09-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/installBSPM.r: Initial version of BSPM installer
+
+2020-09-20  Iñaki Úcar  <iucar@fedoraproject.org>
+
+	* inst/examples/installRSPM.r: Add RH/CentOS/Fedora support
+
+2020-09-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml (install): Switch to BSPM use for Travis
+
+2020-09-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/installRSPM.r: First rough version of an RSPM
+	installer which 'works for me' on Ubuntu but needs other tests
+
+2020-09-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/check.r: New option '-n | --no-manvig' replacing
+	earlier attempt and implementing '--no-manual --no-vignettes'
+
+2020-09-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Added 'last commit' badge
+
+2020-09-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/installDeps.r: Added initial version
+
+2020-08-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/tt.r: For n=1 enforce serial mode
+
+2020-07-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/cos.r: Support pre-built tar.gz as well
+
+2020-07-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/cow.r: Support pre-built tar.gz as well
+
+2020-07-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/c4c.r: Support pre-built tar.gz as well
+
+2020-07-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/com.r: Add 'check_on_macos' wrapper
+
+2020-06-28  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/examples/check.r: Add options --no-manual and --no-vignettes
+
 2020-06-26  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.3.11
