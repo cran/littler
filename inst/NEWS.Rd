@@ -3,6 +3,36 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
+\section{Changes in littler version 0.3.13 (2021-07-24)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item New script \code{compiledDeps.r} to show which dependencies
+      are compiled
+      \item New script \code{silenceTwitterAccount.r} wrapping
+      \pkg{rtweet}
+      \item The \code{-c} or \code{--code} option for
+      \code{installRSPM.r} was corrected
+      \item The \code{kitten.r} script now passes options \sQuote{bunny}
+      and \sQuote{puppy} on to the \code{pkgKitten::kitten()} call; 
+      new options to call the Arma and Eigen variants were added
+      \item The \code{getRStudioDesktop.r} and \code{getRStudioServer.r}
+      scripts were updated for a change in \pkg{rvest}
+      \item Two typos in the \code{tt.r} help message were correct
+      (Aaron Wolen in \ghpr{86})
+      \item The message in \code{cranIncoming.r} was corrected.
+    }
+    \item Changes in package
+    \itemize{
+      \item Added Continuous Integration runner via \code{run.sh} from
+      \href{https://eddelbuettel.github.io/r-ci/}{r-ci}.
+      \item Two vignettes got two extra vignette attributes.
+      \item The mkdocs-material documentation input was moved.
+      \item The basic unit tests were slightly refactored and updated.
+    }
+  }
+}
+
 \section{Changes in littler version 0.3.12 (2020-10-04)}{
   \itemize{
     \item Changes in examples
