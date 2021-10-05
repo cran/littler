@@ -3,6 +3,22 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/littler/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/littler/issues/#1}{##1}}
 
+\section{Changes in littler version 0.3.14 (2021-10-05)}{
+  \itemize{
+    \item Changes in examples
+    \itemize{
+      \item Updated RStudio download helper to changed file names
+      \item Added a new option to \code{roxy.r} wrapper
+      \item Added a downloader for Quarto command-line tool
+    }
+    \item Changes in package
+    \itemize{
+      \item The \code{configure} files were updated to the standard of
+      version 2.69 following a CRAN request
+    }
+  }
+}
+
 \section{Changes in littler version 0.3.13 (2021-07-24)}{
   \itemize{
     \item Changes in examples
@@ -14,7 +30,7 @@
       \item The \code{-c} or \code{--code} option for
       \code{installRSPM.r} was corrected
       \item The \code{kitten.r} script now passes options \sQuote{bunny}
-      and \sQuote{puppy} on to the \code{pkgKitten::kitten()} call; 
+      and \sQuote{puppy} on to the \code{pkgKitten::kitten()} call;
       new options to call the Arma and Eigen variants were added
       \item The \code{getRStudioDesktop.r} and \code{getRStudioServer.r}
       scripts were updated for a change in \pkg{rvest}
@@ -67,14 +83,14 @@
     }
   }
 }
-      
+
 \section{Changes in littler version 0.3.10 (2020-06-02)}{
   \itemize{
     \item Changes in examples
     \itemize{
       \item The \code{update.r} script only considers writeable directories.
       \item The \code{rcc.r} script tries to report full logs by setting
-      \code{_R_CHECK_TESTS_NLINES_=0}. 
+      \code{_R_CHECK_TESTS_NLINES_=0}.
       \item The \code{tt.r} script has an improved \code{ncpu} fallback.
       \item Several installation and updating scripts set
       \code{_R_SHLIB_STRIP_} to \code{TRUE}.
@@ -123,7 +139,7 @@
       mentioning the environment variables it considers.
       \item A new script \code{tt.r} was added to support \code{tinytest}.
       \item The rhub checking scripts now all suppress builds of manual
-      and vignettes as asking for working latex appears to be too much. 
+      and vignettes as asking for working latex appears to be too much.
     }
     \item Changes in package
     \itemize{
@@ -171,7 +187,7 @@
     \item Changes in examples
     \itemize{
       \item The script \code{roxy.r} now uses a cached copy of \pkg{roxygen2}
-      version 6.0.1 (if available) as the current version 6.1.0  
+      version 6.0.1 (if available) as the current version 6.1.0
       changed behaviour.
       \item The script \code{rcc.r} was updated as the underlying
       \pkg{rcmdcheck} changed parameter order.
@@ -285,10 +301,10 @@
   \itemize{
     \item Changes in build system
     \itemize{
-      \item First CRAN Release as R package following nine years of source releases 
+      \item First CRAN Release as R package following nine years of source releases
       \item Script \code{configure}, \code{src/Makevars.in} and
       remainder of build system rewritten to take advantage of the R package
-      build infrastructure 
+      build infrastructure
       \item Reproducible builds are better supported as the (changing)
       compilation timestamps etc are only inserted for 'verbose builds'
       directly off the git repo, but not for Debian (or CRAN) builds off the

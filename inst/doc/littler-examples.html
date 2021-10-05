@@ -147,7 +147,7 @@ nav > ul {border: none}
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">9.869604</span></span></code></pre></div>
 <p>But unlike bc(1), GNU R has a vast number of statistical functions. For example, we can quickly compute a <code>summary()</code> and show a stem-and-leaf plot for file sizes in a given directory via</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-l</span> /boot <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;BEGIN {print &quot;size&quot;} !/^total/ {print $5}&#39;</span> <span class="kw">|</span> <span class="dt">\</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     r <span class="at">-de</span> <span class="st">&quot;print(summary(X[,1])); stem(X[,1])&quot;</span></span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     <span class="ex">r</span> <span class="at">-de</span> <span class="st">&quot;print(summary(X[,1])); stem(X[,1])&quot;</span></span></code></pre></div>
 <p>which produces something like</p>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
      13     512  110100  486900  768400 4735000
