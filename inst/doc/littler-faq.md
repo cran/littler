@@ -1,29 +1,14 @@
+<!--
+%\VignetteEngine{simplermarkdown::mdweave_to_html}
+%\VignetteIndexEntry{Littler FAQ}
+%\VignetteEncoding{UTF-8}
+-->
 ---
 title: "Littler FAQ"
 author: "Dirk Eddelbuettel"
 date: "2019-03-23, updated 2020-06-16"
-output: 
-  minidown::mini_document:
-    framework: water
-    toc: true
-    toc_float: true
-    code_folding:
-      source: show
-      output: show
-      message: hide
-      warning: hide
-      error: hide
-vignette: >
-  %\VignetteIndexEntry{Littler FAQ}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignettePackage{littler}
-  %\VignetteEncoding{UTF-8}
+css: "water.css"
 ---
-
-
-```{css, echo=FALSE}
-nav > ul {border: none}
-```
 
 ### Well, why?
 

@@ -1,8 +1,8 @@
 Package: littler
 Type: Package
 Title: R at the Command-Line via 'r'
-Version: 0.3.14
-Date: 2021-10-05
+Version: 0.3.15
+Date: 2021-12-03
 Author: Dirk Eddelbuettel and Jeff Horner
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A scripting and command-line front-end
@@ -20,10 +20,10 @@ BugReports: https://github.com/eddelbuettel/littler/issues
 License: GPL (>= 2)
 OS_type: unix
 SystemRequirements: libR
-Suggests: knitr, rmarkdown, minidown, docopt, rcmdcheck, foghorn
-VignetteBuilder: knitr
+Suggests: simplermarkdown, docopt, rcmdcheck, foghorn
+VignetteBuilder: simplermarkdown
 RoxygenNote: 5.0.1
 NeedsCompilation: yes
-Packaged: 2021-10-05 13:51:41 UTC; edd
+Packaged: 2021-12-03 13:02:23 UTC; edd
 Repository: CRAN
-Date/Publication: 2021-10-05 23:30:02 UTC
+Date/Publication: 2021-12-03 13:20:02 UTC

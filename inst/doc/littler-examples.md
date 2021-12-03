@@ -1,28 +1,14 @@
+<!--
+%\VignetteEngine{simplermarkdown::mdweave_to_html}
+%\VignetteIndexEntry{Littler Examples}
+%\VignetteEncoding{UTF-8}
+-->
 ---
 title: "Littler Examples"
 author: "Dirk Eddelbuettel"
 date: "Originally written 2015-10-28; Updated 2017-12-10, 2018-05-24, 2019-01-06, 2019-06-09 and 2020-06-16"
-output:
-  minidown::mini_document:
-    framework: water
-    toc: true
-    toc_float: true
-    code_folding:
-      source: show
-      output: show
-      message: hide
-      warning: hide
-      error: hide
-vignette: >
-  %\VignetteIndexEntry{Littler Examples}
-  %\VignettePackage{littler}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+css: "water.css"
 ---
-
-```{css, echo=FALSE}
-nav > ul {border: none}
-```
 
 ## Overview
 
