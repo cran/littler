@@ -7,7 +7,7 @@ AC_PREREQ([2.69])
 # Every other copy of the package version number gets its value from here
 # The m4_esyscmd_s invocation is due to an excellent StackOverflow answer.
 # Sadly it breaks under Debian package builds (likely due to a missing component)
-AC_INIT([littler],[0.3.15],[edd@debian.org])
+AC_INIT([littler],[0.3.16],[edd@debian.org])
 
 #  Look for ancillary configure tools in tools
 dnl AC_CONFIG_AUX_DIR(tools)
@@ -54,11 +54,12 @@ AC_CHECK_HEADER([getopt.h],
 AC_HEADER_MAJOR
 
 # Checks for library functions.
+AC_CHECK_FUNC(setenv,AC_DEFINE(HAVE_SETENV,1,[Define if you have the setenv function.]))
+AC_CHECK_FUNC(clock_gettime,AC_DEFINE(HAVE_CLOCK_GETTIME,1,[Define if you have clock_gettime.]))
+AC_CHECK_FUNC(realtime,AC_DEFINE(HAVE_REALTIME,1,[Define if you have realtime.]))
+AC_CHECK_FUNC(gettimeofday,AC_DEFINE(HAVE_GETTIMEOFDAY,1,[Define if you have the gettimeofday function.]))
+AC_CHECK_FUNC(time,AC_DEFINE(HAVE_TIME,1,[Define if you have the time function.]))
 
-AC_CHECK_FUNC(setenv,AC_DEFINE(HAVE_SETENV,1, [Define if you have the setenv function.]))
-AC_CHECK_FUNC(gettimeofday,
-    AC_DEFINE(HAVE_GETTIMEOFDAY,1, [Define if you have the gettimeofday function.]))
-AC_CHECK_FUNC(time,AC_DEFINE(HAVE_TIME,1, [Define if you have the time function.]))
 
 # Checks for typedefs, structures, and compiler characteristics.
 

@@ -2,7 +2,7 @@
 #
 # tinytest wrapper
 #
-# Copyright (C) 2019 - 2020  Dirk Eddelbuettel
+# Copyright (C) 2019 - 2022  Dirk Eddelbuettel
 #
 # Released under GPL (>= 2)
 
