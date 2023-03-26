@@ -92,9 +92,6 @@ background-color: unset;
 color: unset;
 }
 </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -108,15 +105,47 @@ color: unset;
 %\VignetteEncoding{UTF-8}
 -->
 <h3 id="well-why">Well, why?</h3>
-<p>Glad you asked. When the initial work started, <code>Rscript</code> did not exist so there was no scripting tool. We take a small amount of pride into beating <code>Rscript</code> narrowly to a first release. Of course, by now, <code>Rscript</code> is more widely used as it ships with every R installation but we still have some aspects we like about <code>r</code>: it is simpler and shorter, deals (in our biased) view more sanely with command-line arguments via the <code>argv</code> vector, always loaded package <code>methods</code> (which <code>Rscript</code> finally came around to a good decade later) and <a href="http://dirk.eddelbuettel.com/blog/2014/09/02/#littler-faster-at-doing-nothing">still starts faster</a>. And <code>r</code> is just to cool a command (in relation to the trusted <code>R</code>) so someone had to!</p>
+<p>Glad you asked. When the initial work started, <code>Rscript</code>
+did not exist so there was no scripting tool. We take a small amount of
+pride into beating <code>Rscript</code> narrowly to a first release. Of
+course, by now, <code>Rscript</code> is more widely used as it ships
+with every R installation but we still have some aspects we like about
+<code>r</code>: it is simpler and shorter, deals (in our biased) view
+more sanely with command-line arguments via the <code>argv</code>
+vector, always loaded package <code>methods</code> (which
+<code>Rscript</code> finally came around to a good decade later) and <a href="http://dirk.eddelbuettel.com/blog/2014/09/02/#littler-faster-at-doing-nothing">still
+starts faster</a>. And <code>r</code> is just to cool a command (in
+relation to the trusted <code>R</code>) so someone had to!</p>
 <h3 id="no-printing">No Printing</h3>
-<p>In the very beginning of <code>littler</code>, we made an executive decision to <em>not</em> echo each command output when we evaluate commands in the read-evaluate-print loop. So <code>2+2</code> will be evaluated silently: four will be computed, but not shown.</p>
-<p>That made sense for scripts we wanted to be silent. The idea is that user will add a <code>print()</code> or <code>cat()</code> as needed. If you desire each step to printed, add a <code>-p</code> or <code>--verbose</code> argument.</p>
+<p>In the very beginning of <code>littler</code>, we made an executive
+decision to <em>not</em> echo each command output when we evaluate
+commands in the read-evaluate-print loop. So <code>2+2</code> will be
+evaluated silently: four will be computed, but not shown.</p>
+<p>That made sense for scripts we wanted to be silent. The idea is that
+user will add a <code>print()</code> or <code>cat()</code> as needed. If
+you desire each step to printed, add a <code>-p</code> or
+<code>--verbose</code> argument.</p>
 <h3 id="no-.renviron">No <code>.Renviron</code></h3>
-<p>Another early decision was to make <code>r</code> start <em>faster</em> than the alternatives. Our <code>r</code> is “just” a small little binary. Whereas <code>R</code> and <code>Rscript</code> are front-end shell scripts sourcing a number of things and setting them dynamically, we determine values <em>at compilation time</em> and freeze them into the binary. That may seem <em>risqué</em> but worked out just fine. However, while we later added the ability to source <code>Rprofile</code> files (which contain R code we can evaluate) there is no way for us to source the <code>Renviron</code> files <em>and to modify the already running process</em>. So if you want to source <code>Renviron</code> you could add an explicit <code>readEnviron()</code> to <code>~/.littler.r</code> or <code>/etc/littler/r</code>.</p>
+<p>Another early decision was to make <code>r</code> start
+<em>faster</em> than the alternatives. Our <code>r</code> is “just” a
+small little binary. Whereas <code>R</code> and <code>Rscript</code> are
+front-end shell scripts sourcing a number of things and setting them
+dynamically, we determine values <em>at compilation time</em> and freeze
+them into the binary. That may seem <em>risqué</em> but worked out just
+fine. However, while we later added the ability to source
+<code>Rprofile</code> files (which contain R code we can evaluate) there
+is no way for us to source the <code>Renviron</code> files <em>and to
+modify the already running process</em>. So if you want to source
+<code>Renviron</code> you could add an explicit
+<code>readEnviron()</code> to <code>~/.littler.r</code> or
+<code>/etc/littler/r</code>.</p>
 <h3 id="lower-case-upper-case">Lower-case / upper-case</h3>
-<p>This is mostly an issue on macOS where the brain surgeons behind the OS decided that <code>r</code> is the same as <code>R</code>. What can we say? On that OS you may need to rename the build to <code>lr</code> instead. Please send your complaints to Cupertino, California.</p>
-<h3 id="adding-the-binary-to-your-path">Adding the binary to your path</h3>
+<p>This is mostly an issue on macOS where the brain surgeons behind the
+OS decided that <code>r</code> is the same as <code>R</code>. What can
+we say? On that OS you may need to rename the build to <code>lr</code>
+instead. Please send your complaints to Cupertino, California.</p>
+<h3 id="adding-the-binary-to-your-path">Adding the binary to your
+path</h3>
 <p>When the package is installed from source, it displays</p>
 <pre><code>*
 * new binary $(TGT) installed in bin/ subdirectory&quot;
@@ -124,13 +153,23 @@ color: unset;
 * on OS X, you may have to name this &#39;lr&#39; instead&quot;
 * see the littler-faq vignette for more details&quot;
 *</code></pre>
-<p>where the variable <code>$(TGT)</code> normally expands to <code>r</code>. As the text suggests you may want to create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic link</a> from a directory in the to make the newly built binary available to users. On Linux you may do</p>
+<p>where the variable <code>$(TGT)</code> normally expands to
+<code>r</code>. As the text suggests you may want to create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic link</a>
+from a directory in the to make the newly built binary available to
+users. On Linux you may do</p>
 <pre><code>cd /usr/local/bin 
 sudo ln -s /usr/local/lib/R/site-library/littler/bin/r .</code></pre>
-<p>to create a link for <code>r</code> in <code>/usr/local/bin</code>. On macOS, as suggested, you may want</p>
+<p>to create a link for <code>r</code> in <code>/usr/local/bin</code>.
+On macOS, as suggested, you may want</p>
 <pre><code>cd /usr/local/bin 
 sudo ln -s /usr/local/lib/R/site-library/littler/bin/r lr</code></pre>
-<p>to create a command <code>lr</code> instead; see the previous question as to why. In either case adjust the source part of the <code>ln</code> command to where your binary is – which R can tell you via <code>system.file(&quot;bin&quot;, &quot;r&quot;, package=&quot;littler&quot;)</code>.</p>
-<p>Also note that <em>e.g.</em> the <a href="https://zsh.sourceforge.io/">zsh</a> has a builtin command <code>r</code> which may conflict, so using the explicit path of, say, <code>/usr/bin/r</code> or <code>/usr/local/bin/r</code> or … may provide an alternative.</p>
+<p>to create a command <code>lr</code> instead; see the previous
+question as to why. In either case adjust the source part of the
+<code>ln</code> command to where your binary is – which R can tell you
+via <code>system.file(&quot;bin&quot;, &quot;r&quot;, package=&quot;littler&quot;)</code>.</p>
+<p>Also note that <em>e.g.</em> the <a href="https://zsh.sourceforge.io/">zsh</a> has a builtin command
+<code>r</code> which may conflict, so using the explicit path of, say,
+<code>/usr/bin/r</code> or <code>/usr/local/bin/r</code> or … may
+provide an alternative.</p>
 </body>
 </html>
