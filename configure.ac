@@ -7,7 +7,7 @@ AC_PREREQ([2.69])
 # Every other copy of the package version number gets its value from here
 # The m4_esyscmd_s invocation is due to an excellent StackOverflow answer.
 # Sadly it breaks under Debian package builds (likely due to a missing component)
-AC_INIT([littler],[0.3.20],[edd@debian.org])
+AC_INIT([littler],[0.3.21],[edd@debian.org])
 
 #  Look for ancillary configure tools in tools
 dnl AC_CONFIG_AUX_DIR(tools)
@@ -59,6 +59,7 @@ AC_CHECK_FUNC(clock_gettime,AC_DEFINE(HAVE_CLOCK_GETTIME,1,[Define if you have c
 AC_CHECK_FUNC(realtime,AC_DEFINE(HAVE_REALTIME,1,[Define if you have realtime.]))
 AC_CHECK_FUNC(gettimeofday,AC_DEFINE(HAVE_GETTIMEOFDAY,1,[Define if you have the gettimeofday function.]))
 AC_CHECK_FUNC(time,AC_DEFINE(HAVE_TIME,1,[Define if you have the time function.]))
+AC_CHECK_FUNC(realpath,AC_DEFINE(HAVE_REALPATH,1,[Define if you have the realpath function.]))
 
 
 # Checks for typedefs, structures, and compiler characteristics.
@@ -121,30 +122,11 @@ fi
 
 # Java
 AC_ARG_WITH([java-libs],
-	[AS_HELP_STRING([--with-java-libs],[Link littler to R's java libraries])],
-              [if test x$"$withval" != xno; then
+	[AS_HELP_STRING([--with-java-libs],[link littler to the R java libraries])],
+              [if test "${withval}" != no; then
                 	AM_LDFLAGS="${AM_LDFLAGS} `${RPROG} CMD config JAVA_LIBS | grep -v ERROR`"
                fi],
 )
-
-dnl # Tcl/TK
-dnl AC_ARG_WITH([tcltk-libs],
-dnl [AS_HELP_STRING([--with-tcltk-libs],[dnl             Link littler to R's tcltk libraries])],
-dnl     [
-dnl             if test x$"$withval" != xno; then
-dnl                             AM_LDFLAGS="${AM_LDFLAGS} `${RPROG} CMD config TCLTK_LIBS | grep -v ERROR`"
-dnl             fi
-dnl     ],
-dnl )
-
-dnl # R version check
-dnl # Note that this may fail really old versions of R as the string wasn't always "R version x.y.z ..."
-dnl r_version=`${RPROG} --version | head -1 | cut -f3 -d" " `
-dnl case ${r_version} in
-dnl     1.*.*|2.0.*|2.1.*|2.2.*|2.3.0)
-dnl              AC_MSG_ERROR([R version ${r_version} is too old. Please upgrade to a more recent version.])
-dnl                      ;;
-dnl esac
 
 #AC_MSG_RESULT([AM_LDFLAGS is now: ${AM_LDFLAGS}])
 # get other linker flags for rpath

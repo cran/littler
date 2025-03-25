@@ -1,10 +1,12 @@
 Package: littler
 Type: Package
 Title: R at the Command-Line via 'r'
-Version: 0.3.20
-Date: 2024-03-23
-Author: Dirk Eddelbuettel and Jeff Horner (2006-2008)
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Version: 0.3.21
+Date: 2025-03-24
+Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
+                    comment = c(ORCID = "0000-0001-6419-907X")),
+             person("Jeff", "Horner", role = "aut",
+                    comment = "(2006-2008)"))
 Description: A scripting and command-line front-end
  is provided by 'r' (aka 'littler') as a lightweight binary wrapper around
  the GNU R language and environment for statistical computing and graphics.
@@ -20,10 +22,13 @@ BugReports: https://github.com/eddelbuettel/littler/issues
 License: GPL (>= 2)
 OS_type: unix
 SystemRequirements: libR
-Suggests: simplermarkdown, docopt, rcmdcheck
+Suggests: simplermarkdown, docopt, rcmdcheck, whoami
 VignetteBuilder: simplermarkdown
 RoxygenNote: 5.0.1
 NeedsCompilation: yes
-Packaged: 2024-03-23 18:27:34 UTC; edd
+Packaged: 2025-03-24 20:07:20 UTC; edd
+Author: Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),
+  Jeff Horner [aut] ((2006-2008))
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Repository: CRAN
-Date/Publication: 2024-03-23 21:50:02 UTC
+Date/Publication: 2025-03-25 05:50:07 UTC
